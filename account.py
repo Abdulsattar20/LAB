@@ -1,23 +1,21 @@
-class account
-
-
+class Account:
     def __init__(self, name:str):
         """
-         this function gets the holder account name and a defult amount of 0
+        this function gets the holder account name and a defult amount of 0
 
-         """
+        """
         self.account_name = name
         self.account_balance = 0
 
 
 
-    def deposit(self, amount: float)-> bool:
+    def deposit(self, amount) -> bool:
         """
-         this function claculate the deposit amount to the total balance
-         :return: if deposit succesful return true otherwise return false
-         """
-        if self.amount > 0 :
-            self.accout_balance += self.amount
+        this function claculate the deposit amount to the total balance
+        :return: if deposit succesful return true otherwise return false
+        """
+        if amount > 0 :
+            self.account_balance += amount
             return True
         else:
             return False
@@ -29,8 +27,8 @@ class account
         this function claculate the withdraw amount from the total balance
         :return: if transaction succesful return true otherwise return false
         """
-        if self.amount>0 and self.account_balance>0:
-            self.accout_balance -= self.amount
+        if amount>0 and self.account_balance>0:
+            self.account_balance -= amount
             return True
         else:
             return False
