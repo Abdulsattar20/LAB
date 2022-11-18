@@ -27,8 +27,8 @@ class Test:
             assert self.a1.get_balance() == approx(1.5, abs=0.001)
 
     def test_get_balance(self):
-        assert self.a1.deposit(5)
-        assert self.a1.withdraw(-3)
+        assert self.a1.deposit(5) is True
+        assert self.a1.withdraw(3) is True
         assert self.a1.get_balance() == 2
 
 
